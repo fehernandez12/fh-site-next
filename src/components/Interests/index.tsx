@@ -36,7 +36,7 @@ function Interests() {
         My interests
       </h1>
       <hr className="border border-b-0 border-x-0 border-gray-800 my-2 lg:my-4" />
-      <div className="text-md flex flex-row">
+      <div className="text-sm lg:text-lg flex flex-row">
         <div className="w-full p-3">
           <List items={interests} />
         </div>
