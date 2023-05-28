@@ -1,27 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Fira+Code&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.blinking-cursor::after {
+  content: "|";
+  animation: blink 1s step-end infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn {
+  @apply transition-colors duration-200 font-semibold rounded h-12 px-4 my-2 focus:outline-none focus:ring-2 focus:border-transparent;
+}
+
+.btn-primary {
+  @apply text-gray-800 bg-gray-100 hover:bg-gray-300 rounded focus:ring-gray-800;
+}
+
+.btn-block {
+  @apply w-full;
+}
+
+.btn-secondary {
+  @apply text-gray-100 bg-gray-800 hover:bg-gray-700 rounded focus:ring-gray-700;
+}
+
+.input {
+  @apply flex-shrink h-10 px-4 leading-6 rounded-sm bg-inherit;
+}
+
+.badge {
+  @apply inline-flex items-center justify-center px-2 py-2 text-sm leading-none rounded-full transition-colors hover:bg-gray-600;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: var(--navbar-padding, 0.5rem);
+  min-height: 4rem /* 64px */;
+  width: 100%;
+}
+:where(.navbar > *) {
+  display: inline-flex;
+  align-items: center;
 }
