@@ -32,7 +32,9 @@ function Interests() {
 
   return (
     <>
-      <h1 className="lg:text-xl font-bold text-gray-800 mt-5">My interests</h1>
+      <h1 className="text-sm lg:text-xl font-bold text-gray-800 mt-5">
+        My interests
+      </h1>
       <hr className="border border-b-0 border-x-0 border-gray-800 my-2 lg:my-4" />
       <div className="text-md flex flex-row">
         <div className="w-full p-3">

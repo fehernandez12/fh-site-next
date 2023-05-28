@@ -44,6 +44,8 @@ function Biography() {
         <Image
           src="/assets/img/fh-foto.png"
           alt="Felipe Hernández"
+          width={height / 2}
+          height={height / 2}
           className="w-3/4 lg:w-full h-3/4 lg:h-full object-cover"
         />
       </div>
