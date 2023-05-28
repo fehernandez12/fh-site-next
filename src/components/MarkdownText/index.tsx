@@ -38,11 +38,12 @@ function MarkdownText(props: MarkdownTextProps) {
             <SyntaxHighlighter
               {...props}
               className="text-code rounded-none"
-              children={String(children).replace(/\n$/, "")}
               style={oneDark}
               language={match[1]}
               PreTag="div"
-            />
+            >
+              {String(children).replace(/\n$/, "")}
+            </SyntaxHighlighter>
           ) : (
             <code {...props} className={className}>
               {children}

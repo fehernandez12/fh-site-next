@@ -11,13 +11,17 @@ function ResultsTitle(props: ResultsTitleProps) {
   if (search && !tag) {
     return (
       <div className="w-full h-18 p-6 flex items-center justify-start border-b-2 border-b-gray-500">
-        <div className="text-2xl font-bold">Search results for '{search}':</div>
+        <div className="text-2xl font-bold">
+          Search results for &apos;{search}&apos;:
+        </div>
       </div>
     );
   } else if (tag && !search) {
     return (
       <div className="w-full h-18 p-6 flex items-center justify-start border-b-2 border-b-gray-500">
-        <div className="text-2xl font-bold">Posts tagged with '{tag}':</div>
+        <div className="text-2xl font-bold">
+          Posts tagged with &apos;{tag}&apos;:
+        </div>
       </div>
     );
   } else {

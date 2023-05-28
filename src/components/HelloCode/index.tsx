@@ -84,6 +84,8 @@ function HelloCode(props: HelloCodeProps) {
     isTyping,
     isDeleting,
     waitBeforeDeleting,
+    messages,
+    TEXTS,
   ]);
 
   return (

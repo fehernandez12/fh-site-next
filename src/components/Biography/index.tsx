@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Experience } from "../Experience";
 import { Interests } from "../Interests";
 import { ScrollUtils } from "@/utils/ScrollUtils";
+import Image from "next/image";
 
 function Biography() {
   const [height, setHeight] = useState(0);
@@ -40,7 +41,7 @@ function Biography() {
         <Interests />
       </div>
       <div className="w-full lg:w-1/2 xl:w-1/3 p-6 lg:p-12 flex justify-center text-center">
-        <img
+        <Image
           src="/assets/img/fh-foto.png"
           alt="Felipe Hernández"
           className="w-3/4 lg:w-full h-3/4 lg:h-full object-cover"

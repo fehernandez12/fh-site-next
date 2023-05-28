@@ -81,8 +81,8 @@ function Contact() {
       <hr className="border border-b-0 border-x-0 border-gray-100 my-4" />
       <p>
         I am always looking for new challenges, my inbox is always open. Whether
-        you have a question or just want to say hi, I'll try my best to get back
-        to you!
+        you have a question or just want to say hi, I&apos;ll try my best to get
+        back to you!
       </p>
       <div className="flex flex-row mt-4 w-full">
         <ContactForm />

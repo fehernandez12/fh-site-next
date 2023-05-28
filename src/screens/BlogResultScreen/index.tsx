@@ -39,7 +39,7 @@ function BlogResultScreen(props: BlogResultScreenProps) {
     }
 
     setLoading(false);
-  }, []);
+  }, [search, tag]);
 
   return loading ? (
     <LoadingScreen />
