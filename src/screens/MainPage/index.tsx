@@ -18,7 +18,10 @@ function MainPage() {
         <section className="bg-[#BEBEBE] w-full flex flex-col lg:flex-row items-center justify-center">
           <Biography />
         </section>
-        <section className="bg-gray-100 w-full flex flex-col lg:flex-row items-center justify-center">
+        <section
+          className="bg-gray-100 w-full flex flex-col lg:flex-row items-center justify-center"
+          id="recent-posts"
+        >
           <RecentPosts />
         </section>
         <section className="bg-[#282C34] w-full flex flex-col items-center justify-center">
