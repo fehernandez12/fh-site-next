@@ -12,7 +12,7 @@ module.exports = {
       mono: ["Fira Code", "system-ui", "sans-serif"],
     },
     fontSize: {
-      sm: "0.625rem",
+      sm: "0.7rem",
       code: "0.8rem",
       base: "0.8rem",
       lg: "1rem",
