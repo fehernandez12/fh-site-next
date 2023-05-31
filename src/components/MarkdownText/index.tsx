@@ -13,16 +13,31 @@ function MarkdownText(props: MarkdownTextProps) {
 
   const components = {
     h1: ({ node, ...props }: { [x: string]: any; node: any }) => (
-      <h1 className="text-lg font-bold" {...props} />
+      <>
+        <h1 className="text-2xl font-bold" {...props} />
+        <br />
+      </>
     ),
     h2: ({ node, ...props }: { [x: string]: any; node: any }) => (
-      <h2 className="font-bold" {...props} />
+      <>
+        <h2 className="text-xl font-bold" {...props} />
+        <br />
+      </>
     ),
     h3: ({ node, ...props }: { [x: string]: any; node: any }) => (
-      <h3 className="text-sm font-bold" {...props} />
+      <>
+        <h3 className="text-lg font-bold" {...props} />
+        <br />
+      </>
     ),
     a: ({ node, ...props }: { [x: string]: any; node: any }) => (
       <a className="text-blue-500 hover:underline" {...props} />
+    ),
+    p: ({ node, ...props }: { [x: string]: any; node: any }) => (
+      <>
+        <p className="leading-8" {...props} />
+        <br />
+      </>
     ),
   };
 
@@ -35,15 +50,18 @@ function MarkdownText(props: MarkdownTextProps) {
         code({ node, inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || "");
           return !inline && match ? (
-            <SyntaxHighlighter
-              {...props}
-              className="text-code rounded-none"
-              style={oneDark}
-              language={match[1]}
-              PreTag="div"
-            >
-              {String(children).replace(/\n$/, "")}
-            </SyntaxHighlighter>
+            <>
+              <SyntaxHighlighter
+                {...props}
+                className="text-code rounded-none"
+                style={oneDark}
+                language={match[1]}
+                PreTag="div"
+              >
+                {String(children).replace(/\n$/, "")}
+              </SyntaxHighlighter>
+              <br />
+            </>
           ) : (
             <code {...props} className={className}>
               {children}

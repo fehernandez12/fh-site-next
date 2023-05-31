@@ -23,7 +23,9 @@ function Related(props: RelatedProps) {
     related && (
       <>
         <div className="w-full bg-[#BEBEBE] pt-12 flex flex-col items-center justify-center">
-          <h1 className="text-4xl font-bold mb-12">Related Posts</h1>
+          <h1 className="text-2xl lg:text-4xl font-bold mb-12">
+            Related Posts
+          </h1>
           {related.map((post) => (
             <Link
               href={`/blog/${post.slug}`}

@@ -15,7 +15,7 @@ function PostContent(props: PostContentProps) {
           Published on {new Date(post.published!).toLocaleDateString()}. Seen{" "}
           {post.views!} times.
         </p>
-        <div className="w-3/5 px-6 lg:px-12 mb-6 lg:mb-12">
+        <div className="w-5/6 lg:w-3/5 px-0 lg:px-12 mb-6 lg:mb-12">
           <MarkdownText text={post.body!} />
         </div>
         <hr className="h-px px-48 my-12 w-full border border-b-0 border-gray-700 bg-gray-700" />
