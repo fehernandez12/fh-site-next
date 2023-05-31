@@ -35,7 +35,7 @@ function MarkdownText(props: MarkdownTextProps) {
     ),
     p: ({ node, ...props }: { [x: string]: any; node: any }) => (
       <>
-        <p className="leading-4" {...props} />
+        <p className="leading-4 lg:leading-6" {...props} />
         <br />
       </>
     ),
