@@ -31,11 +31,11 @@ function MarkdownText(props: MarkdownTextProps) {
       </>
     ),
     a: ({ node, ...props }: { [x: string]: any; node: any }) => (
-      <a className="text-blue-500 hover:underline" {...props} />
+      <a className="text-blue-500 hover:underline" target="_blank" {...props} />
     ),
     p: ({ node, ...props }: { [x: string]: any; node: any }) => (
       <>
-        <p className="leading-8" {...props} />
+        <p className="leading-4" {...props} />
         <br />
       </>
     ),
