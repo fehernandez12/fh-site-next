@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { duotoneDark as oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 interface MarkdownTextProps {
@@ -53,7 +53,7 @@ function MarkdownText(props: MarkdownTextProps) {
             <>
               <SyntaxHighlighter
                 {...props}
-                className="text-code rounded-none"
+                className="text-code rounded-md break-words"
                 style={oneDark}
                 language={match[1]}
                 PreTag="div"

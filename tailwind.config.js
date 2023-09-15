@@ -10,6 +10,7 @@ module.exports = {
     fontFamily: {
       serif: ["Quicksand", "system-ui", "sans-serif"],
       mono: ["Red Hat Mono", "system-ui", "Monaco", "sans-serif"],
+      code: ["Red Hat Mono", "system-ui", "Monaco", "sans-serif"],
     },
     fontSize: {
       sm: "0.7rem",
