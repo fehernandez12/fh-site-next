@@ -34,9 +34,12 @@ function BlogPostScreen(props: BlogPostScreenProps) {
     <>
       <Head>
         <title>Felipe Hernández - {post!.title}</title>
+        <meta name="description" content={post!.abstract} key="desc" />
+        <meta property="og:title" content={post!.title} key="og:title" />
+        <meta property="og:description" content={post!.abstract} />
       </Head>
       <Navbar />
-      <PostTitle title={post!.title} />
+      <PostTitle title={post!.title} abstract={post!.abstract} />
       <PostContent post={post!} />
       <Related slug={slug} />
       <Footer landing />

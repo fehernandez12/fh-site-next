@@ -5,6 +5,7 @@ interface Status {
 interface BlogPost {
   title: string;
   slug: string;
+  abstract?: string;
   body?: string;
   published?: string;
   status?: Status;

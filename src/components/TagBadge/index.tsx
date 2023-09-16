@@ -19,12 +19,12 @@ function TagBadge(props: TagBadgeProps) {
   };
 
   return (
-    <p
+    <button
       className="badge bg-[#282C34] text-gray-100"
       onClick={(e) => onTagClick(e)}
     >
       {tag}
-    </p>
+    </button>
   );
 }
 

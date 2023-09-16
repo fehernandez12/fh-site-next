@@ -33,7 +33,7 @@ function PostCard(props: PostCardProps) {
           } transition-colors duration-300 flex flex-col items-start justify-start p-4 shadow-lg rounded-sm`}
         >
           <h1 className="text-xl font-bold">{post.title}</h1>
-          <MarkdownText text={truncateString(post.body!, 80)} />
+          {post.abstract ?? <MarkdownText text={truncateString(post.body!, 80)} />}
           <div className="w-full h-1/6 pt-2 mt-auto border border-b-0 border-x-0 border-gray-800 relative bottom-0">
             <p className="text-sm text-gray-500">
               Published on {new Date(post.published!).toLocaleDateString()}
