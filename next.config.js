@@ -29,7 +29,7 @@ const nextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value: "default-src https:",
+            value: "default-src 'self'",
           },
         ],
       },
