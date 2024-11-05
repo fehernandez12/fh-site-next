@@ -29,7 +29,7 @@ function Biography() {
           React Native, Sass and Tailwind CSS. Take a look at my work,{" "}
           {
             <Link
-              href={"#recent-posts"}
+              href={"/blog"}
               className="underline hover:text-gray-800 transition-colors duration-100"
             >
               my blog
