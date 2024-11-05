@@ -8,10 +8,7 @@ function List(props: ListProps) {
   const { items } = props;
   return (
     <>
-      <ul
-        className="list-disc list-inside ml-3 mt-2"
-        style={{ columnCount: "3" }}
-      >
+      <ul className="list-disc list-inside ml-3" style={{ columnCount: "3" }}>
         {items.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
