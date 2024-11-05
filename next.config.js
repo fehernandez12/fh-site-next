@@ -30,7 +30,7 @@ const nextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com",
+              "default-src *; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
           },
         ],
       },
