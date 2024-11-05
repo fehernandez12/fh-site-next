@@ -92,7 +92,7 @@ function HelloCode(props: HelloCodeProps) {
     <>
       <div className="text-white font-mono text-sm md:text-base lg:text-2xl">
         <SyntaxHighlighter
-          className="blinking-cursor"
+          className="blinking-cursor font-mono"
           style={oneDark}
           language={currentLanguage}
         >

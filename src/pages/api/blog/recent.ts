@@ -1,17 +1,19 @@
+import { db } from "@/lib/firebase/firebaseApp";
+import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const apiUrl = process.env.API_URL;
+const coll = collection(db, "posts");
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
-  const requestUrl = `${apiUrl}blog/posts/recent/`;
-  const headers = new Headers();
-  headers.append("Content-Type", "application/json");
-  const response = await fetch(requestUrl, {
-    headers,
-    method: "GET",
-  });
-  if (!response.ok) throw new Error(response.statusText);
-  const data = await response.json();
+  let data: TBlogPost[];
+  try {
+    const q = query(coll, orderBy("created", "desc"), limit(12));
+    const snap = await getDocs(q);
+    data = snap.docs.map((doc) => doc.data() as BlogPost);
+  } catch (error) {
+    res.status(500).json(error);
+    return;
+  }
   res.status(200).json(data);
 };
 

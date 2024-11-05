@@ -5,7 +5,7 @@ export default function BlogHome() {
   return (
     <>
       <Head>
-        <title>Felipe Hernández - Blog</title>
+        <title>FH - Blog</title>
       </Head>
       <BlogHomeScreen />;
     </>

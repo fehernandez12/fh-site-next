@@ -1,5 +1,9 @@
 import { AlertUtils } from "@/utils/AlertUtils";
-import { inputChangeHandler, textAreaChangeHandler } from "@/utils/FormUtils";
+import {
+  emailInputChangeHandler,
+  inputChangeHandler,
+  textAreaChangeHandler,
+} from "@/utils/FormUtils";
 import React, { useState } from "react";
 
 function ContactForm() {
@@ -27,6 +31,7 @@ function ContactForm() {
     setName("");
     setEmail("");
     setMessage("");
+    setDisabled(false);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -45,22 +50,25 @@ function ContactForm() {
     <form className="w-full flex flex-col" onSubmit={(e) => handleSubmit(e)}>
       <input
         type="text"
-        className="w-full h-12 px-4 my-2 text-gray-800 border border-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent"
+        className="contact-input"
         placeholder="Name"
         value={name}
+        required={true}
         onChange={(e) => inputChangeHandler(setName, e)}
       />
       <input
         type="email"
-        className="w-full h-12 px-4 my-2 text-gray-800 border border-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent"
+        className="contact-input"
         placeholder="Email"
         value={email}
-        onChange={(e) => inputChangeHandler(setEmail, e)}
+        required={true}
+        onChange={(e) => emailInputChangeHandler(setEmail, e)}
       />
       <textarea
-        className="w-full h-24 px-4 my-2 text-gray-800 border border-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent"
+        className="contact-textarea"
         placeholder="Message"
         value={message}
+        required={true}
         onChange={(e) => textAreaChangeHandler(setMessage, e)}
       ></textarea>
       <button

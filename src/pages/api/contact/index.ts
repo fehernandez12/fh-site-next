@@ -1,20 +1,26 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import { db } from "@/lib/firebase/firebaseApp";
+import {
+  addDoc,
+  collection,
+  DocumentReference,
+  DocumentSnapshot,
+  getDoc,
+} from "firebase/firestore";
 
-const apiUrl = process.env.API_URL;
+const coll = collection(db, "contacts");
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
-  const requestUrl = `${apiUrl}blog/contact/`;
-  const headers = new Headers();
-  const body = JSON.stringify(_req.body);
-  headers.append("Content-Type", "application/json");
-  const response = await fetch(requestUrl, {
-    headers,
-    body,
-    method: "POST",
-  });
-  if (!response.ok) throw new Error(response.statusText);
-  const data = await response.json();
-  res.status(200).json(data);
+  let doc: DocumentSnapshot;
+  try {
+    const ref = await addDoc(coll, _req.body);
+    doc = await getDoc(ref);
+    console.log("Document written: ", doc.data());
+  } catch (e) {
+    res.status(500).json({ error: e });
+    return;
+  }
+  res.status(201).json(doc.data() as Contact);
 };
 
 export default handler;

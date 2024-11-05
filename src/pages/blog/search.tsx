@@ -17,8 +17,5 @@ export interface SearchProps {
 }
 
 export default function search({ q, tag }: SearchProps) {
-  console.log("q: ", q);
-  console.log("tag: ", tag);
-
   return <BlogResultScreen search={q} tag={tag} />;
 }

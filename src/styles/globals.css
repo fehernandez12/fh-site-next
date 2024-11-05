@@ -42,6 +42,18 @@
   @apply inline-flex items-center justify-center px-2 py-2 text-sm leading-none rounded-full transition-colors hover:bg-gray-600;
 }
 
+.contact-input {
+  @apply w-full h-12 px-4 my-2 text-gray-800 border border-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent;
+}
+
+.contact-textarea {
+  @apply w-full h-24 px-4 my-2 text-gray-800 border border-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent;
+}
+
+.contact-input-error {
+  @apply w-full h-12 px-4 my-2 text-gray-800 border border-red-400 rounded focus:outline-red-500 focus:ring-2 focus:ring-red-800 focus:border-red-600;
+}
+
 .navbar {
   display: flex;
   align-items: center;

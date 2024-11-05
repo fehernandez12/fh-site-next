@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Felipe Hernández - Software Engineer</title>
+        <title>FH - Software Engineer</title>
       </Head>
       <MainPage />;
     </>

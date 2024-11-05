@@ -46,11 +46,7 @@ function BlogResultScreen(props: BlogResultScreenProps) {
   ) : (
     <>
       <Head>
-        <title>
-          {tag
-            ? `Felipe Hernández: #${tag}`
-            : `Felipe Hernández - Search: ${search}`}{" "}
-        </title>
+        <title>{tag ? `FH: #${tag}` : `FH - Search: ${search}`} </title>
       </Head>
       <Navbar />
       <ResultsTitle tag={tag} search={search} />

@@ -33,7 +33,7 @@ function BlogPostScreen(props: BlogPostScreenProps) {
   ) : (
     <>
       <Head>
-        <title>Felipe Hernández - {post!.title}</title>
+        <title>FH - {post!.title}</title>
         <meta name="description" content={post!.abstract} key="desc" />
         <meta property="og:title" content={post!.title} key="og:title" />
         <meta property="og:description" content={post!.abstract} />
