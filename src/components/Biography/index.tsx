@@ -7,6 +7,7 @@ import Image from "next/image";
 
 function Biography() {
   const [height, setHeight] = useState(0);
+  const GOLDEN_RATIO = 1.61803398875;
 
   useEffect(() => {
     setHeight(window.innerHeight);
@@ -22,11 +23,12 @@ function Biography() {
         <h1 className="text-xl font-bold text-gray-800">About me</h1>
         <hr className="border border-b-0 border-x-0 border-gray-800 my-2 lg:my-4" />
         <p>
-          I am a Full Stack Developer with industry experience building
-          websites, SPA, PWA and Web Services. I specialize in Java, Go, Python
-          and Typescript and have professional experience working with Spring,
-          Django, React & Angular. I also have experience working with React,
-          React Native, Sass and Tailwind CSS. Take a look at my work,{" "}
+          I am a Full Stack Developer with more than 5 years of industry
+          experience building websites, SPA, PWA and Web Services. I specialize
+          in Java, Go, Python and Typescript and have professional experience
+          working with Spring, Django, React & Angular. I also have experience
+          working with Flutter, React Native, Flask, Sass and Tailwind CSS. Take
+          a look at my work,{" "}
           {
             <Link
               href={"/blog"}
@@ -44,8 +46,8 @@ function Biography() {
         <Image
           src="/assets/img/fh-foto.png"
           alt="Felipe Hernández"
-          width={height / 2}
-          height={height / 2}
+          width={height * (1 / GOLDEN_RATIO)}
+          height={height * (1 / GOLDEN_RATIO)}
           className="w-3/4 lg:w-full h-3/4 lg:h-full object-cover"
         />
       </div>

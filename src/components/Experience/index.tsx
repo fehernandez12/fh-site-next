@@ -22,8 +22,24 @@ function List(props: ListProps) {
 }
 
 function Experience() {
-  const languages = ["Java", "Go", "Python", "Typescript"];
-  const libs = ["Spring", "Django", "React", "Angular", "Next.js"];
+  const languages = [
+    "Java",
+    "Go",
+    "Python",
+    "Javascript",
+    "Typescript",
+    "Dart",
+    "C#",
+  ];
+  const libs = [
+    "Spring",
+    "Django",
+    "React",
+    "Angular",
+    "Flutter",
+    "Flask",
+    "Next.js",
+  ];
 
   return (
     <>

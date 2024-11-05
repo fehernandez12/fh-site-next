@@ -39,7 +39,7 @@
 }
 
 .badge {
-  @apply inline-flex items-center justify-center px-2 py-2 text-sm leading-none rounded-full transition-colors hover:bg-gray-600;
+  @apply inline-flex items-center justify-center px-2 py-2 text-sm leading-none rounded-md transition-colors hover:bg-gray-600;
 }
 
 .contact-input {

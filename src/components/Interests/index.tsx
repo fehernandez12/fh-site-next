@@ -26,8 +26,10 @@ function Interests() {
     "A good beer",
     "Lego",
     "Music composition",
-    "Recording",
+    "Audio mixing",
     "Writing",
+    "Wine tasting",
+    "Mixology",
   ];
 
   return (
