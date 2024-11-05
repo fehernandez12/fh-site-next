@@ -29,7 +29,7 @@ const nextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'",
+            value: "style-src 'self' 'unsafe-inline'",
           },
         ],
       },
