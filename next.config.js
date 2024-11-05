@@ -29,8 +29,7 @@ const nextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; manifest-src 'self'; media-src 'self'; worker-src 'self'; prefetch-src 'self'; child-src 'none'; navigate-to 'self'; report-to 'self'; report-uri 'self'; block-all-mixed-content; upgrade-insecure-requests; require-sri-for script style; require-trusted-types-for 'script';",
+            value: "default-src https:",
           },
         ],
       },
