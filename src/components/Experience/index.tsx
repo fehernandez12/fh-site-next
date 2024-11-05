@@ -48,10 +48,10 @@ function Experience() {
       </h1>
       <hr className="border border-b-0 border-x-0 border-gray-800 my-2 lg:my-4" />
       <div className="text-sm lg:text-lg flex flex-row">
-        <div className="w-full lg:w-1/2 p-3">
+        <div className="w-full lg:w-1/2 p-2">
           <List title="Languages" items={languages} />
         </div>
-        <div className="w-full lg:w-1/2 p-3">
+        <div className="w-full lg:w-1/2 p-2">
           <List title="Frameworks & libraries" items={libs} />
         </div>
       </div>

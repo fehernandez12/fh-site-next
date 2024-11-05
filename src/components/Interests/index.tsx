@@ -39,7 +39,7 @@ function Interests() {
       </h1>
       <hr className="border border-b-0 border-x-0 border-gray-800 my-2 lg:my-4" />
       <div className="text-sm lg:text-lg flex flex-row">
-        <div className="w-full p-3">
+        <div className="w-full p-2">
           <List items={interests} />
         </div>
       </div>
