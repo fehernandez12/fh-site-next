@@ -15,7 +15,6 @@ const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
   try {
     const ref = await addDoc(coll, _req.body);
     doc = await getDoc(ref);
-    console.log("Document written: ", doc.data());
   } catch (e) {
     res.status(500).json({ error: e });
     return;

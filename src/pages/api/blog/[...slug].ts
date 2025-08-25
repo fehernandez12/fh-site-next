@@ -6,6 +6,9 @@ import {
   getDocs,
   collection,
   orderBy,
+  getDoc,
+  doc,
+  setDoc,
 } from "firebase/firestore";
 import { NextApiRequest, NextApiResponse } from "next";
 
@@ -21,7 +24,10 @@ const postBySlug = async (_req: NextApiRequest, res: NextApiResponse) => {
     res.status(404).json({ message: "Post not found" });
     return;
   }
+  const id = snap.docs[0].id;
   const post = snap.docs[0].data() as BlogPost;
+  post.views!++;
+  await setDoc(doc(coll, id), post);
   if (path === "related") {
     const relatedQ = fireQuery(
       coll,

@@ -33,6 +33,9 @@ function MarkdownText(props: MarkdownTextProps) {
     a: ({ node, ...props }: { [x: string]: any; node: any }) => (
       <a className="text-blue-500 hover:underline" target="_blank" {...props} />
     ),
+    li: ({ node, ...props }: { [x: string]: any; node: any }) => (
+      <li {...props}></li>
+    ),
     p: ({ node, ...props }: { [x: string]: any; node: any }) => (
       <>
         <p className="leading-6" {...props} />

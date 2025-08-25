@@ -65,3 +65,8 @@
   display: inline-flex;
   align-items: center;
 }
+
+ul li::marker {
+  font-size: 1.2em;
+  content: " • "; /* Custom content for the marker */
+}

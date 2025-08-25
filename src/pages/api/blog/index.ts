@@ -6,6 +6,7 @@ import {
   limit,
   getDocs,
   where,
+  and,
 } from "firebase/firestore";
 import { NextApiRequest, NextApiResponse } from "next";
 

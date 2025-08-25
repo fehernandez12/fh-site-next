@@ -12,7 +12,7 @@ function ContactForm() {
   const [message, setMessage] = useState("");
   const [disabled, setDisabled] = useState(false);
 
-  async function sendData(): Promise<void> {
+  async function sendData(): Promise<TContact> {
     const response = await fetch(`/api/contact`, {
       method: "POST",
       headers: {
@@ -25,6 +25,7 @@ function ContactForm() {
       }),
     });
     const data: TContact = await response.json();
+    return data;
   }
 
   const resetForm = () => {
@@ -37,12 +38,13 @@ function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setDisabled(true);
-    sendData();
-    AlertUtils.success(
-      "Message sent!",
-      `Thank you, ${name}! I will get in touch with you as soon as possible.`
-    ).then(() => {
-      resetForm();
+    sendData().then((data) => {
+      AlertUtils.success(
+        "Message sent!",
+        `Thank you, ${data.name}! I will get in touch with you as soon as possible.`
+      ).then(() => {
+        resetForm();
+      });
     });
   };
 
